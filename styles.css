@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Montserrat&family=Nunito&family=Roboto&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Belanosima', sans-serif;
 }
+
+/*fonts: font-family: 'Belanosima', sans-serif;*/
 
 body {
   font-family: Arial, sans-serif;
