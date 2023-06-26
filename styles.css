@@ -71,7 +71,7 @@ header {
 .film-thumbnail .film-title {
   font-weight: bold;
   margin: 0;
-  color: white;
+  color: #FFFFFF;
   padding-bottom: 6px;
 }
 
@@ -83,4 +83,9 @@ header {
 .film-thumbnail .film-runtime {
   font-size: 14px;
   color: #777;
+}
+
+.film-thumbnail:hover {
+  background: #000000;
+  box-shadow: 0 0 40px #FFFFFF;
 }

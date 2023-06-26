@@ -84,7 +84,7 @@ if (filmId) {
             <img src="${film.image}" alt="${film.title}">
             <h3>People:</h3>
             <ul>
-              ${peopleNames.map(name => `<li>${name}</li>`).join('')}
+              ${peopleNames.map(name => `<ul>${name}</ul>`).join('')}
             </ul>
           `;
           filmDetailsContainer.innerHTML = filmDetails;
