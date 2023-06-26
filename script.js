@@ -81,11 +81,10 @@ if (filmId) {
             <p><strong>Producer:</strong> ${film.producer}</p>
             <p><strong>Release Date:</strong> ${film.release_date}</p>
             <p><strong>Running Time:</strong> ${film.running_time} minutes</p>
+            <p>People:${peopleNames.map(name => `${''} ${name} ${''}`).join(', ')}</p>
+
             <img src="${film.image}" alt="${film.title}">
-            <h3>People:</h3>
-            <ul>
-              ${peopleNames.map(name => `<ul>${name}</ul>`).join('')}
-            </ul>
+
           `;
           filmDetailsContainer.innerHTML = filmDetails;
         })
