@@ -30,8 +30,20 @@ header {
 
 .film-details-container {
   max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
+  display: flex;
+  margin: auto;
+  margin-top: 12px;
+}
+
+.film-details-container p {
+  padding: 4px;
+}
+
+.film-details-container img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 6px;
 }
 
 #filmDetails {
