@@ -6,8 +6,6 @@
 
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #000000;
 }
 
@@ -28,6 +26,17 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
+}
+
+.film-details-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+#filmDetails {
+  color: white;
+  margin-bottom: 16px;
 }
 
 .film-thumbnail {
