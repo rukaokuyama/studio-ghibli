@@ -5,7 +5,7 @@ describe('Studio Ghibli Filmography', () => {
     // test for thumbnail
     cy.get('.film-thumbnail').first().click();
 
-    // verify filmtitle and film detail
+    // verify filmTitle and film detail
     cy.get('#filmTitle').should('exist');
     cy.get('#filmDetails').should('exist');
   });
@@ -15,5 +15,7 @@ describe('Studio Ghibli Filmography', () => {
 
     // search for totoro in the search bar
     cy.get('#searchBar').type('My Neighbor Totoro');
+
+    cy.get('.film-title').should('contain', 'My Neighbor Totoro');
   })
 });
