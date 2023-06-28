@@ -98,19 +98,20 @@ if (filmId) {
 }
 
 // Search for films by title or release date
-const searchBar = document.getElementById('searchBar');
-searchBar.addEventListener('input', event => {
-  const searchTerm = event.target.value.toLowerCase();
-  const filmThumbnails = document.getElementsByClassName('film-thumbnail');
+document.addEventListener('input', event => {
+  if (event.target.id === 'searchBar') {
+    const searchTerm = event.target.value.toLowerCase();
+    const filmThumbnails = document.getElementsByClassName('film-thumbnail');
 
-  Array.from(filmThumbnails).forEach(thumbnail => {
-    const title = thumbnail.querySelector('.film-title').textContent.toLowerCase();
-    const releaseDate = thumbnail.querySelector('.film-date').textContent.toLowerCase();
+    Array.from(filmThumbnails).forEach(thumbnail => {
+      const title = thumbnail.querySelector('.film-title').textContent.toLowerCase();
+      const releaseDate = thumbnail.querySelector('.film-date').textContent.toLowerCase();
 
-    if (title.includes(searchTerm) || releaseDate.includes(searchTerm)) {
-      thumbnail.style.display = 'block';
-    } else {
-      thumbnail.style.display = 'none';
-    }
-  });
+      if (title.includes(searchTerm) || releaseDate.includes(searchTerm)) {
+        thumbnail.style.display = 'block';
+      } else {
+        thumbnail.style.display = 'none';
+      }
+    });
+  }
 });
