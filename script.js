@@ -1,5 +1,5 @@
 // Fetch film data from the Ghibli Film API
-fetch('https://ghibliapi.vercel.app/films')
+fetch('https://ghibli.rest/films')
   .then(response => response.json())
   .then(data => {
     // Store film data in-memory
@@ -61,7 +61,7 @@ const filmDetailsContainer = document.getElementById('filmDetails');
 const filmId = new URLSearchParams(window.location.search).get('id');
 
 if (filmId) {
-  fetch(`https://ghibliapi.vercel.app/films/${filmId}`)
+  fetch(`https://ghibli.rest/films?id=${filmId}`)
     .then(response => response.json())
     .then(film => {
       const peopleUrls = film.people;
