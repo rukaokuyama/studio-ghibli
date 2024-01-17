@@ -1,11 +1,9 @@
-// Fetch film data from the Ghibli Film API
 fetch('https://ghibliapi.vercel.app/films')
   .then(response => response.json())
   .then(data => {
-    // Store film data in-memory
+
     const films = data;
 
-    // Generate film thumbnails and display them on the page
     const filmographyContainer = document.getElementById('filmography');
 
     films.forEach(film => {
@@ -17,7 +15,6 @@ fetch('https://ghibliapi.vercel.app/films')
     console.log('Error fetching film data:', error);
   });
 
-// Create a film thumbnail element
 function createFilmThumbnail(film) {
   const thumbnailContainer = document.createElement('div');
   thumbnailContainer.classList.add('film-thumbnail');
@@ -66,7 +63,6 @@ if (filmId) {
     .then(film => {
       const peopleUrls = film.people;
 
-      // Fetch details of each person
       const fetchPeople = peopleUrls.map(url => fetch(url).then(response => response.json()));
 
       Promise.all(fetchPeople)
@@ -97,7 +93,6 @@ if (filmId) {
     });
 }
 
-// Search for films by title or release date
 document.addEventListener('input', event => {
   if (event.target.id === 'searchBar') {
     const searchTerm = event.target.value.toLowerCase();
