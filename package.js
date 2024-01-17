@@ -1,10 +1,11 @@
 {
+  "name": "studio-ghibli",
+  "version": "1.0.0",
   "engines": {
-    "node": "14.x"
+    "node": "16.15.1"
   },
-}
-{
   "scripts": {
-    "start": "node server.js"
+    "start": "app.js"
   },
+  // other package.json configurations...
 }
