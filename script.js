@@ -45,7 +45,6 @@ function createFilmThumbnail(film) {
   thumbnailContainer.appendChild(thumbnailImage);
   thumbnailContainer.appendChild(filmInfo);
 
-  // Add click event listener to navigate to Film Details page
   thumbnailContainer.addEventListener('click', () => {
     window.location.href = `film.html?id=${film.id}`;
   });
@@ -53,7 +52,6 @@ function createFilmThumbnail(film) {
   return thumbnailContainer;
 }
 
-// Retrieve film details and display them on the Film Details page
 const filmDetailsContainer = document.getElementById('filmDetails');
 const filmId = new URLSearchParams(window.location.search).get('id');
 
